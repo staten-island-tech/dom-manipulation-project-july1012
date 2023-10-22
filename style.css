@@ -1,0 +1,35 @@
+html,
+body,
+*{
+    box-sizing: border-box;
+    font-size: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.box{
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 30px;
+    margin: 5rem;
+    background-color: rgba(240, 166, 178, 0.245);
+    position: relative;
+    transition: 0.5s;
+    box-shadow: 5px 5px 5px 1px #EB9486;
+}
+.box:hover {
+    transform: translateY(-15px);
+}
+.pic{
+    width: 75%;
+    height: auto;
+}
+
+
+.page{
+    display: flex;
+}

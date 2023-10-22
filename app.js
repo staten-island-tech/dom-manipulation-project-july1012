@@ -1,13 +1,45 @@
-DOMSelectors = {
-    form: document.querySelector("#form"),
-    color: document.querySelector(".color-name"),
-    h2s: document.querySelectorAll("h2"),
+const DOMSelectors = {
+  form: document.querySelector("#form"),
+  name: document.querySelector("#name"),
+  artist: document.querySelector("#artist"),
+  image: document.querySelector("#image"),
+  page: document.querySelector(".page"),
 };
 
-console.log(DOMSelectors.form);
-
-DOMSelectors.form.addEventListener("submit", function(event){
-    event.preventDefault();
-    console.log(DOMSelectors.color.value);
-//     DOMSelectors.h2s.forEach((header)=> header.textContent = DOMSelectors.color.value);
+DOMSelectors.form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  const album = {
+    name: DOMSelectors.name.value,
+    artist: DOMSelectors.artist.value,
+    image: DOMSelectors.image.value,
+  };
+  inject(album);
+  clear();
+  remove();
 });
+
+function inject(alb) {
+  DOMSelectors.page.insertAdjacentHTML(
+    "beforeend",
+    `   <div class="box">
+<h2>${alb.name}</h2>
+<h4>${alb.artist}</h4>
+<img src="${alb.image}" class="pic" alt="">
+<button class="buttonremove">remove</button>
+</div>`
+  );
+}
+
+function clear() {
+  DOMSelectors.name.value = "";
+  DOMSelectors.artist.value = "";
+  DOMSelectors.image.value = "";
+}
+
+function remove() {
+  document.querySelectorAll(".buttonremove").forEach((btn) =>
+    btn.addEventListener("click", (event) => {
+      event.target.parentElement.remove();
+    })
+  );
+}
