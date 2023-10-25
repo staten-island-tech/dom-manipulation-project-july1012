@@ -5,8 +5,18 @@ body,
     font-size: 10px;
     padding: 0;
     margin: 0;
+    background-color: #C1BDDB;
 }
-
+@media screen and (max-width: 900px) {
+    .card{
+        width: 40%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .card{
+        width: 100%;
+    }
+}
 .box{
     width: 20rem;
     height: 20rem;
@@ -16,10 +26,11 @@ body,
     justify-content: space-evenly;
     border-radius: 30px;
     margin: 5rem;
-    background-color: rgba(240, 166, 178, 0.245);
+    background-color: #F2B7C6;
     position: relative;
     transition: 0.5s;
     box-shadow: 5px 5px 5px 1px #EB9486;
+    
 }
 .box:hover {
     transform: translateY(-15px);
@@ -31,5 +42,26 @@ body,
 
 
 .page{
+    background-color: #C1BDDB;
     display: flex;
+    
 }
+
+.header{
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #C1BDDB;
+}
+
+.textbox{
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px;
+    background-color: antiquewhite;
+    padding:5px;
+}
+
