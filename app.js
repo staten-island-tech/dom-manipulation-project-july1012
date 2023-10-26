@@ -22,18 +22,12 @@ function inject(alb) {
   DOMSelectors.page.insertAdjacentHTML(
     "beforeend",
     `   <div class="box">
-<h2>${alb.name}</h2>
-<h4>${alb.artist}</h4>
+<h2 class="type">${alb.name}</h2>
+<h4 class="type">${alb.artist}</h4>
 <img src="${alb.image}" class="pic" alt="">
 <button class="buttonremove">remove</button>
 </div>`
   );
-}
-
-function clear() {
-  DOMSelectors.name.value = "";
-  DOMSelectors.artist.value = "";
-  DOMSelectors.image.value = "";
 }
 
 function remove() {
@@ -42,4 +36,10 @@ function remove() {
       event.target.parentElement.remove();
     })
   );
+}
+
+function clear() {
+  DOMSelectors.name.value = "";
+  DOMSelectors.artist.value = "";
+  DOMSelectors.image.value = "";
 }

@@ -6,6 +6,7 @@ body,
     padding: 0;
     margin: 0;
     background-color: #C1BDDB;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 @media screen and (max-width: 900px) {
     .card{
@@ -19,7 +20,7 @@ body,
 }
 .box{
     width: 20rem;
-    height: 20rem;
+    height: 23rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,8 +44,7 @@ body,
 
 .page{
     background-color: #C1BDDB;
-    display: flex;
-    
+    display: flex;    
 }
 
 .header{
@@ -54,14 +54,45 @@ body,
     justify-content: space-evenly;
     background-color: #C1BDDB;
 }
-
+/* boxes where you type inputs*/
 .textbox{
     font-size: 10px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin: 20px;
+    margin: auto;
     background-color: antiquewhite;
     padding:5px;
+    border-radius:5px;
 }
+/* text for inputs - songname, artist, imageurl */
+.text{
+    margin:8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+/* button "submit answers" */
+.submitbutton{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin:auto;
+    margin-top: 10px;
+    border-radius:5px;
+    padding:1.5px;
+    background-color: antiquewhite;
 
+}
+/*text in card - song name and artist */
+.type{
+    background-color: #F2B7C6;
+    margin:auto;
+}
+/* button "remove" on card */
+.buttonremove{
+    background-color: #EB9486;
+    margin:auto;
+    border-radius:5px;
+    padding:1.5px;
+}
