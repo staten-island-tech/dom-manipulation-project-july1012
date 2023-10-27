@@ -30,6 +30,12 @@ function inject(alb) {
   );
 }
 
+function clear() {
+  DOMSelectors.name.value = "";
+  DOMSelectors.artist.value = "";
+  DOMSelectors.image.value = "";
+}
+
 function remove() {
   document.querySelectorAll(".buttonremove").forEach((btn) =>
     btn.addEventListener("click", (event) => {
@@ -38,8 +44,3 @@ function remove() {
   );
 }
 
-function clear() {
-  DOMSelectors.name.value = "";
-  DOMSelectors.artist.value = "";
-  DOMSelectors.image.value = "";
-}
